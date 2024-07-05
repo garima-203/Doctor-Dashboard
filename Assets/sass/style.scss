@@ -1,0 +1,40 @@
+@import 'nav';
+@import 'main';
+@import 'requestTable';
+@import 'footer';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #f7f7f8;
+    overflow-x: hidden;
+}
+
+/* Notification Card */
+.notification-card {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 1000;
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none;
+
+    .card {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+ 
+}

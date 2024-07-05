@@ -1,0 +1,230 @@
+/* Variables */
+$primary-color: #007bff;
+$secondary-color: #40b1e6;
+$light-gray: rgb(245, 248, 251);
+$white:  #fcfdff;
+$dark-blue: #001f3f;
+$light-blue: #8fc2f4;
+$sidebar-width: 225px; 
+
+/* Navbar Styles */
+.wrapper {
+    .sidebar {
+        background-color: $primary-color;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 100%;
+        padding: 20px 0;
+        transition: all 0.0s ease-in-out;
+        z-index: 2;
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+
+            img {
+                display: block;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+
+            h3,
+            p {
+                display: none;
+                color: $white;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    padding: 13px 20px;
+                    border-bottom: 1px solid rgb(179, 213, 251);
+                    color: $white;
+                    font-size: 16px;
+                    position: relative;
+                    text-decoration: none;
+
+                    .icon {
+                        color: $white;
+                        width: 30px;
+                        display: inline-block;
+                        text-align: center;
+                    }
+
+                    .item {
+                        display: none;
+                        margin-left: 10px;
+                    }
+
+                    &:hover,
+                    &.active {
+                        color: $light-blue;
+                        background: $white;
+                        border-right: 2px solid $light-gray;
+                        border-radius: 50px;
+                        width: 90%;
+                        margin: 7px;
+
+                        .icon {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section {
+        width: calc(100% - 80px);
+        margin-left: 80px;
+        transition: all 0.0s ease-in-out;
+
+        .top_navbar {
+            background-color: $primary-color;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            z-index: 2;
+
+            .hamburger a {
+                font-size: 28px;
+                color: $white;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+
+           
+
+           
+        }
+    }
+
+
+
+}
+
+.notification .icon {
+    font-size: 26px;
+    color: $white;
+
+    a:hover {
+        color: $secondary-color;
+    }
+}
+
+.fixed-notification {
+    .notification .icon {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        z-index: 3;
+    }
+
+    .notification    .badge {
+        position: absolute;
+        top: 16px;
+        right: 30px;
+        padding: 5px 5px;
+        border-radius: 50%;
+        background: red;
+        color: white;
+        display: none;
+        z-index: 1000;
+    }
+}
+ 
+
+
+
+body.expanded {
+    .wrapper {
+        .sidebar {
+            width: $sidebar-width;
+
+            .profile {
+
+                h3,
+                p {
+                    display: block;
+                }
+
+               
+            }
+            ul {
+                li {
+                    a {
+                        .item {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section {
+            margin-left: $sidebar-width;
+        }
+    }
+
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+// Media queries
+@media (max-width: 992px) {
+    body.expanded {
+        .wrapper {
+            .sidebar {
+                transform: translateX(0);
+            }
+
+            .section {
+                margin-left: 0;
+                transform: translateX($sidebar-width);
+            }
+        }
+    }
+ 
+
+    
+}
+
+@media (max-width: 768px) {
+    body.expanded {
+        .overlay {
+            display: block;
+        }
+
+        .wrapper {
+            .section {
+                width: 100%;
+                transform: none;
+            }
+        }
+    }
+}

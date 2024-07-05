@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../Assets/dist/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+                <div class="fixed-notification">
+                    <div class="notification">
+                        <i class="fas fa-bell icon fixed-icon"></i>
+                        <span class="badge" id="notification-badge" style="display: none;"> </span>
+                    </div>
+                </div>
+            </div>
+            <main class="content   " id="main"> 
+                 
+                <div class="notification-card" id="notificationCard" style="display: none; float: right;">
+                    <div class="card" style="float: right;">
+                        <div class="card-header" style="border-bottom: none; font-size: 20px; color: rgb(239, 92, 92);">
+                            Notifications 
+                        </div>
+                        <div class="card-body" id="notificationCardBody">
+                            <!-- Notifications content will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="gridContainer"> <!--parent div gridcontainer start-->
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card doctor-portfolio-card text-white">
+                                    <div class="row g-0 flex-column-reverse flex-md-row">
+                                        <div class="col-md-8 d-flex align-items-center">
+                                            <div class="card-body">
+                                                <p class="greeting">Good Morning,</p>
+                                                <h3 class="name">Dr. Surbhi</h3>
+                                                <p class="schedule-text">Your schedule today:</p>
+                                                <div class="d-flex justify-content-between flex-wrap">
+                                                    <div class="schedule-item">
+                                                        <div class="icon bg-info">
+                                                            <i class="fas fa-procedures"></i>
+                                                        </div>
+                                                        <div>
+                                                            <div class="schedule-count">8</div>
+                                                            <p>Patients</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-item">
+                                                        <div class="icon bg-success">
+                                                            <i class="fas fa-heartbeat"></i>
+                                                        </div>
+                                                        <div>
+                                                            <div class="schedule-count">2</div>
+                                                            <p>Surgeries</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-item">
+                                                        <div class="icon bg-warning">
+                                                            <i class="fas fa-walking"></i>
+                                                        </div>
+                                                        <div>
+                                                            <div class="schedule-count">2</div>
+                                                            <p>Discharges</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd58judYx225Niz5uRBaJc1UJi4DFHjOZNJA&s"
+                                                class="doctor-image" alt="Doctor Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARDS-->
+                    <div class=" detailCards">
+                        <div class="container mt-4">
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+                                <div class="col ">
+                                    <div class="card_detail h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <h3 class="card-title " style="margin-bottom: 0.5rem; ">Scheduled Appointments</h3>
+                                            <i class="fas fa-calendar-alt card-icon"
+                                                style="color: rgb(123, 222, 123); font-size: 2rem; margin-right: 1rem; "></i>
+                                            <h6 class="card-text" style="  margin-left: auto; font-size: 1.5rem;">
+                                                <strong> 04</strong>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col ">
+                                    <div class="card_detail h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <h3 class="card-title" style="margin-bottom: 0.5rem;">Previous Visits</h3>
+                                            <i class="fas fa-history card-icon"
+                                                style="color: rgb(123, 222, 123);  font-size: 2rem; margin-right: 1rem;  padding: 10px"></i>
+                                            <h6 class="card-text" style=" margin-left: auto; font-size: 1.5rem; ">
+                                                <strong> 06 </strong>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col  ">
+                                    <div class="card_detail h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <h3 class="card-title" style="margin-bottom: 0.5rem;">TOTAL PATIENTS</h3>
+                                            <i class="fas fa-users card-icon"
+                                                style="color: rgb(123, 222, 123); font-size: 2rem; margin-right: 1rem; padding: 10px"></i>
+                                            <h6 class="card-text" style="  margin-left: auto; font-size: 1.5rem;">
+                                                <strong> 10 </strong>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--END CARDS-->
+
+
+                    <!--Today's Patient Cards -->
+
+                    <div class="  patientCard">
+                        <h1 class="text-center">Today's Patients</h1>
+                        <div id="patient-card" class="row">
+                            <!-- Patient card will be inserted here -->
+                        </div>
+                        <a href="./acceptedPatientData.html" style="display: block; text-align: center; margin-bottom: 15px;">See All</a>     
+        
+                    </div>
+                    <!--Today's Patient Cards End-->
+
+                </div><!--parent div gridcontainer end-->
+                <div class="grid-chart"> <!--grid-chart start-->
+                    <!--patient action table start -->
+                    <div class="table-container">
+
+                         
+                            <div class="row justify-content-between align-items-center">
+
+                                <h3 id="main-heading" style=" text-align: center;   "> Appointment Request</h3>
+
+                                <div class="col-12 col-sm-6">
+                                    <nav aria-label="Page navigation" id="pagination"
+                                        style="display: none; float: right;">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <span class="page-link pagination-gap" id="current-date"
+                                                    style="display: none;">
+                                                    <input type="date" id="date-picker"
+                                                        style="border: none; background: none; outline: none;">
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        
+                        <div id="table-container" class="container table-responsive ">
+                            <table id="patient-table" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th  >Name</th>
+                                        <th  >Gender</th>
+                                        <th >Email</th>
+                                        <th >Phone Number</th>
+                                        <th >Birth Date</th>
+                                        <th >Disease Description</th>
+                                        <th >Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-body">
+                                    <!-- Table rows will be inserted here -->
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <a href="./requestPatientData.html" id="see-all-button">See All</a>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal for setting appointment date and time -->
+                        <div class="modal fade" id="appointmentModal" tabindex="-1"
+                            aria-labelledby="appointmentModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="appointmentModalLabel">Set Appointment Date and Time
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="appointmentForm">
+                                            <div class="mb-3">
+                                                <label for="appointmentDate" class="form-label">Appointment Date</label>
+                                                <input type="date" class="form-control" id="appointmentDate" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="appointmentTime" class="form-label">Appointment Time</label>
+                                                <input type="time" class="form-control" id="appointmentTime" required>
+                                            </div>
+                                            <div id="error-message" class="error-message"></div>
+                                            <input type="hidden" id="patientId">
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="saveAppointmentButton">Save
+                                            Appointment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--patient action table end -->
+
+                    <!--Chart starts -->
+
+                    <div class=" chart-container">
+                        <h1>Patient Distribution by Gender</h1>
+                        <canvas id="genderChart"></canvas>
+                    </div>
+                    <!--Chart ends -->
+                </div><!--grid-chart end-->
+
+
+
+                <!-- chart card starts -->
+                <div class="container-chart  ">
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+                        <div class="col ">
+                            <div class="card_chart ">
+                                <div class="card-body d-flex flex-column">
+                                    <h1 class="card-title " style="margin-bottom: 0.5rem; "> Initial Visits vs.
+                                        Follow-ups</h1>
+                                    <div class=" chart-container2">
+
+                                        <canvas id="patientTypeChart"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col ">
+                            <div class="card_chart  ">
+                                <div class="card-body d-flex flex-column">
+                                    <h1 class="card-title " style="margin-bottom: 0.5rem; "> No. of Treated Patient
+                                        (Age)</h1>
+                                    <div class="  chart-container2">
+                                        <canvas id="treatedPatientsChart"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col ">
+                            <div class="card_chart ">
+                                <div class="card-body d-flex flex-column">
+                                    <h1 class="card-title " style="margin-bottom: 0.5rem; ">Patient Visited (Monthly)
+                                    </h1>
+                                    <div class=" chart-container2">
+                                        <canvas id="visitsChart"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- chart card end -->
+
+            </main>
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg"
+                    alt="profile_picture">
+                <h3>Anamika Roy</h3>
+                <p>Designer</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="../src/index.html">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item" >My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../src/requestPatientData.html">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Patient Request</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../src/acceptedPatientData.html">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Appointments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../src/index.html">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../src/index.html">
+                        <span class="icon"><i class="fas fa-envelope"></i></span>
+                        <span class="item">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../src/index.html">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../src/index.html">
+                        <span class="icon"><i class="fas fa-headset"></i></span>
+                        <span class="item">Support</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../src/index.html">
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="item">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+  <!--Footer-->
+  <footer class="footer">
+    <p>&copy; 2024 Your Website. All rights reserved.</p>
+  </footer>
+  <!--Footer-->
+
+
+
+   <script>
+     //HAMBURGER CODE
+ var hamburger = document.querySelector(".hamburger");
+ var overlay = document.querySelector(".overlay");
+
+ hamburger.addEventListener("click", function () {
+     document.querySelector("body").classList.toggle("expanded");
+ });
+
+ overlay.addEventListener("click", function () {
+     document.querySelector("body").classList.remove("expanded");
+ });
+ 
+ 
+ 
+   </script>
+    <script type="module" src="../Assets/JS/dashboardPatientCard.js"></script> 
+    <script type="module" src="../Assets/JS/dashboardTable.js"></script>  
+    <script type="module" src="../Assets/JS/script.js"></script>    
+    <script src="../Assets/JS/chart.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
