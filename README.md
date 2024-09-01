@@ -6,5 +6,6 @@ Tools- Html,Css,Js,Firebase
 
 # Linked
 Fill the patients form - https://github.com/garima-203/Patients-details (patients form page)
-and get the details in this page 
+and get the details in the dashboard
+
  
