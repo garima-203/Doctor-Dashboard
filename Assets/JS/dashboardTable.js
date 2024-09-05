@@ -94,8 +94,13 @@ function renderData(patients) {
 }
 
 function fetchPatients() {
-    onValue(ref(database, 'patients'), (snapshot) => {
-        patientData = {};
+    onValue(ref(database, 'patients'), (snapshot) => { 
+        if (!snapshot.exists()) {
+            patientTable.innerHTML = '<tr><td colspan="7">No patient data available.</td></tr>';
+            return; 
+        }
+
+        patientData = {}; 
         snapshot.forEach(childSnapshot => {
             const patient = childSnapshot.val();
             patient.id = childSnapshot.key;
@@ -104,11 +109,12 @@ function fetchPatients() {
                 patientData[submissionDate] = [];
             }
             patientData[submissionDate].push(patient);
-        });
+        }); 
         sortedDates = Object.keys(patientData).sort((a, b) => new Date(b) - new Date(a));
         paginateData();
     });
 }
+
 
 function paginateData() {
     const currentDate = getFormattedDate();
