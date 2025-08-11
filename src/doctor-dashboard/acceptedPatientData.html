@@ -5,13 +5,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/dist/css/style.css">
+<link rel="stylesheet" href="../../Assets/dist/css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://img.icons8.com/?size=100&id=958&format=png&color=000000">
     <title>Doctor's Dashboard</title>
-
+    
 </head>
 
 <body>
@@ -35,12 +35,12 @@
 
             </div>
             <main class="content" id="main">
-
+                 
                 <h3 class="mb-3 fw-bold fs-1"> </h3>
                 <div class="notification-card" id="notificationCard" style="display: none; float: right;">
                     <div class="card" style="float: right;">
                         <div class="card-header" style="border-bottom: none; font-size: 20px; color: rgb(239, 92, 92);">
-                            Notifications
+                            Notifications 
                         </div>
                         <div class="card-body" id="notificationCardBody">
                             <!-- Notifications content will be dynamically added here -->
@@ -50,9 +50,9 @@
                 <div class="table-container">
 
                     <div class="mt-3 container">
-                        <div class="justify-content-between align-items-center row">
+                        <div class="align-items-center justify-content-between row">
                             <div class="col-sm-6 col-12">
-                                <h1 id="main-heading" style=" text-align: center;">Appointment Request Received</h1>
+                                <h1 id="main-heading" style=" text-align: center;">Appointend Patient</h1>
                             </div>
                             <div class="col-sm-6 col-12">
                                 <nav aria-label="Page navigation" id="pagination" style="  float: right;">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="table-container" class="mt-3 container table-responsive">
+                    <div id="table-container" class="table-responsive mt-3 container">
                         <table id="patient-table" class="table table-hover">
                             <thead>
                                 <tr>
@@ -132,49 +132,49 @@
             </div>
             <ul>
                 <li>
-                    <a href="../index.html">
+                    <a href="../doctor-dashboard/dashboardMain.html">
                         <span class="icon"><i class="fa-desktop fas"></i></span>
                         <span class="item">My Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../src/requestPatientData.html">
+                    <a href="../doctor-dashboard/requestPatientData.html">
                         <span class="icon"><i class="fa-user-friends fas"></i></span>
                         <span class="item">Patient Request</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../src/acceptedPatientData.html">
+                    <a href="../doctor-dashboard/acceptedPatientData.html">
                         <span class="icon"><i class="fa-tachometer-alt fas"></i></span>
                         <span class="item">Appointments</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../index.html">
+                    <a href="../doctor-dashboard/dashboardMain.html">
                         <span class="icon"><i class="fa-chart-line fas"></i></span>
                         <span class="item">Reports</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../index.html">
+                    <a href="../doctor-dashboard/dashboardMain.html">
                         <span class="icon"><i class="fa-envelope fas"></i></span>
                         <span class="item">Messages</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../index.html">
+                    <a href="../doctor-dashboard/dashboardMain.html">
                         <span class="icon"><i class="fa-cog fas"></i></span>
                         <span class="item">Settings</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../index.html">
+                    <a href="../doctor-dashboard/dashboardMain.html">
                         <span class="icon"><i class="fa-headset fas"></i></span>
                         <span class="item">Support</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../index.html">
+                    <a href="../doctor-dashboard/dashboardMain.html">
                         <span class="icon"><i class="fa-sign-out-alt fas"></i></span>
                         <span class="item">Logout</span>
                     </a>
@@ -192,22 +192,23 @@
   </footer>
   <!--Footer-->
 
+
     <script>
-        //HAMBURGER CODE
-        var hamburger = document.querySelector(".hamburger");
-        var overlay = document.querySelector(".overlay");
+         //HAMBURGER CODE
+ var hamburger = document.querySelector(".hamburger");
+ var overlay = document.querySelector(".overlay");
 
-        hamburger.addEventListener("click", function () {
-            document.querySelector("body").classList.toggle("expanded");
-        });
+ hamburger.addEventListener("click", function () {
+     document.querySelector("body").classList.toggle("expanded");
+ });
 
-        overlay.addEventListener("click", function () {
-            document.querySelector("body").classList.remove("expanded");
-        });
-
+ overlay.addEventListener("click", function () {
+     document.querySelector("body").classList.remove("expanded");
+ });
+ 
     </script>
-    <script type="module" src="../Assets/JS/requestPatientTable.js"></script>
-    <script type="module" src="../Assets/JS/script.js"></script>
+    <script type="module" src="../../Assets/JS/acceptedPatientTable.js"></script>
+    <script type="module" src="../../Assets/JS/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
